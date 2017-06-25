@@ -1,0 +1,67 @@
+<html>
+<head>
+		{% extends 'homepage/base.html' %}
+		{% load staticfiles %}
+
+<meta charset="UTF-8">
+	<title>{% block title %}Register{% endblock %}</title>
+    {%block css%}
+
+		<link rel='stylesheet' href="{% static 'homepage/reg.css' %}" type='text/css'/>
+	{% endblock %}
+</head>
+{% block body %}
+<body>
+<div class="content">
+	<fieldset class="">
+		<br><br><br>
+		<div id="container">
+			<div id="Container_body">
+				<div>
+					<h1 class="form_title">Sign up</h1>
+				</div>
+				<hr>
+				<form action="" method="POST" id="form" enctype="multipart/form-data"> {% csrf_token %}
+					<div class="names">
+						<form name="form">
+						<input type="text" name="first_name" value="" placeholder="fname" id="id_first_name" class="input_name" required>
+						<pre></pre>
+						<input type="text" name="last_name" value="" placeholder="lname" id="id_last_name" class="input_name" required>
+					</div> 
+					<pre></pre>
+					<input type="text" name="username" value="" placeholder="username" id="id_username" class="input_name" required>
+					<pre></pre>
+
+					<div >
+						<input type="number" name="uid" value=""  placeholder="UID" class="input_name" id="uid" required>
+					</div>
+					<pre></pre>
+
+					<div>
+						<input type="text" name="email" value=""  placeholder="Your Email" class="input_email" id="id_email">
+					<pre></pre>
+					</div>
+      		  
+					<div>
+						<input type="password" name="password" value=""  placeholder="New Password" class="input_password" id="id_password">
+         			<pre></pre>
+					</div>
+     		        
+					<div >
+						<input type="password" name="cpassword" value=""  placeholder="Confirm Password" class="input_Re_password" id="id_cpassword" required>
+					</div>
+					<pre></pre>
+
+
+					
+					<div>
+						<button type="submit" class="button1">Sign Up</button><pre></pre>
+					</div>
+				</form>
+			</div>
+		</div>
+	</fieldset>
+</div>
+</body>
+{% endblock %}
+</html>

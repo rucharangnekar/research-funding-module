@@ -1,0 +1,36 @@
+.type{
+
+ background-color: #c2d6d6;
+   height:50px;
+   font-size:35px;
+   margin-left:35%;
+   text-decoration:none;
+   color:black;
+   padding:10px;
+   margin:5px;
+
+}
+
+h2{
+	font-size:45px;
+}
+
+a{
+	text-decoration:none;
+}
+
+a:hover{
+	outline:0;
+	text-decoration:none;
+}
+
+.info{
+text-align:center;    
+background-color:rgba(0, 0, 0, 0.1);
+width:800px;
+height:auto;
+margin-top:5px;
+margin-bottom:5px;
+font-size:20px;
+
+}

@@ -1,0 +1,42 @@
+{% extends 'homepage/tbase.html' %}
+{% load staticfiles %}
+{% block css %}
+<html>
+<head>
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
+
+<!-- Website CSS style -->
+<link rel="stylesheet" type="text/css" href="assets/css/main.css">
+
+<!-- Website Font style -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+
+<!-- Google Fonts -->
+<link href='https://fonts.googleapis.com/css?family=Passion+One' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
+{% endblock %}
+</head>
+
+<body>
+{%block body%}
+<style>
+
+.content{
+min-height:200px;
+margin-top:90px;
+text-align:center;
+}
+
+</style>
+<div class="content">
+<h1 style="font-family:serif;">Welcome to the Teacher Dashboard of Research Funding Module</h1><br>
+
+<h4>Click on "check notifications" at the top right corner to check pending notifications.</h4>
+</div>
+{% endblock %}
+</body>

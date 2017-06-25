@@ -1,0 +1,59 @@
+{% extends 'homepage/base.html' %}
+{% load staticfiles %}
+{% block css %}
+<html>
+<head>
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
+
+<!-- Website CSS style -->
+<link rel="stylesheet" type="text/css" href="assets/css/main.css">
+
+<!-- Website Font style -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+
+<!-- Google Fonts -->
+<link href='https://fonts.googleapis.com/css?family=Passion+One' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
+{% endblock %}
+</head>
+{% block body %}
+<style>
+	.content{
+		color:black;
+		min-height:200px;
+	}
+	span{
+		font-family:cursive;
+		color:white;
+	}
+	.h2{
+		color:white;
+	}
+</style>
+<body>
+<div class="content">
+{% if te %}
+<h2 class="h2">Submitted details:</h2>
+<h2> 
+Group ID:            <span>{{ s.g_id }}</span><br>
+Group Leader:	<span>{{s.student1}}</span><br>
+Team Member 2:	<span>{{s.student2}}</span><br>
+Team Member 3:	<span>{{s.student3}}</span><br> 
+Title:           <span> {{ s.title }}</span><br>
+Mentor:          <span>{{ te }}</span><br>
+Abstract:        <span>{{ s.abstract }}</span><br>
+Amount requested:<span>{{ s.amt }}</span><br></h2>
+
+{% else %}
+<h2><span>Form not submitted yet.</span></h2> 
+{% endif %}
+ 
+</div>
+</body>
+{% endblock %}
+</html>

@@ -1,0 +1,84 @@
+{%extends 'homepage/tbase.html' %}
+
+{%block title %}
+Teacher Home
+{%endblock%}
+
+
+{%block body%}
+<body>
+<style>
+.content{
+	min-height:226px;
+}
+p{
+	font-size:20px;
+}
+
+.linker{
+	font-size:20px;
+	margin:10px;
+	color:black;
+	font-weight:bold;
+}
+
+table{
+	border:solid 1px black;
+	cellpadding:20px;
+	
+}
+
+th,td{
+border-left: 1px solid #000;
+border-right: 1px solid #000;
+}
+
+tr{
+	cellpadding:20px;
+	margin-bottom:15px;
+	margin-top:15px;
+}
+
+table tr:nth-child(odd) {
+    background: #d7a08c;
+}
+
+table tr:nth-child(even) {
+    background: #aca8ed;
+}
+
+</style>
+
+
+<div class="content" >
+	<br><br>
+	<table style="color:white; width:90%;font-size:20px;">
+	<tr><th>Group id</th>
+	<th>Group Leader</th>
+	<th>Member 2</th>
+	<th>Member 3</th>
+	<th style="width:100px;">Abstract</th>
+	<th>Funding Amount</th>
+	<th>Status</th>
+	
+	</tr>
+		{% for i in s %}
+	<tr><td> {{i.g_id}} </td>
+		<td> {{i.student1}}</td>
+		<td> {{i.student2}}</td>
+		<td> {{i.student3}}</td>
+		<td> {{i.abstract}}</td>
+		<td>{{i.amt}}</td>
+		{% if i.status %}
+		<td>Accepted</td>
+		{% else %}
+		<td>Rejected</td>
+		{% endif %}
+		</tr>	
+		<br>
+		{% endfor %}
+		</table>
+	
+</div>
+</body>
+{%endblock%}

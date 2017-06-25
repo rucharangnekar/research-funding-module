@@ -1,0 +1,43 @@
+{% extends 'homepage/base.html' %}
+
+{%block title%}
+HomePage
+{%endblock%}
+
+{%block css%}
+{%load staticfiles%}
+<link rel="stylesheet" type="text/css" href="{% static 'homepage/styling.css' %}"/>
+
+
+</style>
+
+
+{%endblock%}
+
+{%block aa%}
+
+{%endblock %}
+
+{%block body%}
+<div class="content">
+	<center><h2>Login as:</h2></center>
+    <center><a href="{% url 'homepage:login' %}" class="type">Student</a>  
+    <a href="{% url 'homepage:login' %}" class="type">Teacher</a></center>
+
+    <br><br><br>
+<center>
+    <div class ="info">
+    <p> How to apply for funding?</p>
+
+    <ol>
+        <li>Login as a Student and fill the form.</li>
+        <li>Submit the form to your mentor.</li>
+        <li>Check the status of the form as the Mentor evaluates it and sends it to the HOD for further evaluation</p>
+        </ol>
+
+        <p>NOTE: Students submitting applications for funding may be asked by the HOD to give a presentation and are advised to be well-prepared with all documentation.</p>
+
+        </div>
+</center>
+</div>
+{%endblock%}

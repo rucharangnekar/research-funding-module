@@ -1,0 +1,24 @@
+{%extends 'homepage/tbase.html' %}
+
+{%block title %}
+Teacher Home
+{%endblock%}
+
+
+{%block body%}
+<body>
+ 
+	<form action="{% url 'homepage:reject' sid%}" method="post" enctype="multipart/form-data"> {% csrf_token %}
+	<h2 style="color:white;">Reason for Rejection:</h2>
+	<div style="color:black;">		<br><textarea name="reason" type="text" id="input-message" placeholder="Reason" style="width: 500px; height:300px;"></textarea>
+	  </div>
+		<br><br>	
+	
+	  <center><input type="Submit" placeholder="SUBMIT"  value="Submit" id="input-submit"/></center>
+	
+	
+	
+	</form>	
+</body>
+
+{% endblock %}

@@ -1,0 +1,74 @@
+{%extends 'homepage/tbase.html' %}
+
+{%block title %}
+Teacher Home
+{%endblock%}
+
+
+{%block body%}
+<body>
+<style>
+.content{
+	min-height:226px;
+}
+p{
+	font-size:20px;
+}
+
+.linker{
+	font-size:20px;
+	margin:10px;
+	color:black;
+	font-weight:bold;
+}
+
+table{
+	border:solid 1px black;
+}
+
+tr{
+	cellpadding:20px;
+	margin-bottom:15px;
+	margin-top:15px;
+	
+	
+}
+
+</style>
+
+
+<div class="content">
+	<form action="{% url 'homepage:notify' %}" method="post">{% csrf_token %}
+	{% if flag %}
+	<table style="color:white; width:90%;">
+	<tr><th>Group id</th>
+	<th>Group Leader</th>
+	<th>Member 2</th>
+	<th>Member 3</th>
+	<th>Abstract</th>
+	<th>Funding Amount</th>
+	<th>Accept</th>
+	<th>Reject</th>
+	
+	</tr>
+		{% for s in students %}
+	<tr><td> {{s.g_id}} </td>
+		<td> {{s.student1}}</td>
+		<td> {{s.student2}}</td>
+		<td> {{s.student3}}</td>
+		<td> {{s.abstract}}</td>
+		<td>{{s.amt}}</td>
+		<td><a href="{% url 'homepage:accept' s.s_id %}" class="linker">Accept</a></td>
+		<td><a href="{% url 'homepage:reject' s.s_id %}" class="linker">Reject</a></td>
+		</tr>	
+		<br>
+		{% endfor %}
+		</table>
+	{% endif %}
+	{% if flag1 %}
+		<h2>No Notification</h2>
+	{% endif %}
+	</form>
+</div>
+</body>
+{%endblock%}

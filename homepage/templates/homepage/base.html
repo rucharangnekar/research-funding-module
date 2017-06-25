@@ -1,0 +1,145 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>{% block title %}Research Funding Module{% endblock %}</title>
+	<!--loads the path to your static files-->
+	{% load staticfiles %}
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link href='https://fonts.googleapis.com/css?family=Satisfy' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="{% static 'homepage/style.css' %}"/>
+	<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script> -->
+
+{% block css %}{% endblock %}
+</head>
+<body>
+
+<script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Scrolling Nav JavaScript -->
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/scrolling-nav.js"></script>
+	<div class="whole">
+  		<div class="container text-center">
+    		<h1>Research funding Module</h1>
+    			<p>Sardar Patel Institute of Technology</p>
+  		</div>
+	</div>
+	
+	{%block aa%}
+	<nav class="navbar navbar-inverse" style="border-radius:0px !important; margin-bottom:0px;">
+		<div class="container-fluid">
+		<!--logo-->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#topNavBar">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+
+			</div>
+			<!--Items-->
+			<div class="collapse navbar-collapse" id="topNavBar">
+
+				<ul class="nav navbar-nav">
+					<li class="active">
+						<a href="{% url 'homepage:index' %}">
+							<span class="glyphicon glyphicon-facetime-video" aria-hidden="true"></span>&nbsp;Home
+						</a>
+					</li>
+				</ul>
+
+				<ul class="nav navbar-nav navbar-right">
+					<li class="">
+							<li><a href="{% url 'homepage:application' %}"><span class="glyphicon glyphicon-user"></span>Apply for Funding </a></li>
+                    </li>
+
+				</ul>
+			
+                <ul class="nav navbar-nav navbar-right">
+					<li class="">
+							<li><a href="{% url 'homepage:check' %}"><span class="glyphicon glyphicon-user"></span>Check status</a></li>
+                    </li>
+
+				</ul>
+                <ul class="nav navbar-nav navbar-right">
+					<li class="">
+							<li><a href="{% url 'homepage:retrievestud' %}"><span class="glyphicon glyphicon-user"></span> View form</a></li>
+                    </li>
+
+				</ul>
+                <ul class="nav navbar-nav navbar-right">
+					<li class="">
+							<li><a href="{% url 'homepage:login' %}"><span class="glyphicon glyphicon-user"></span> Login</a></li>
+                    </li>
+										<li class="">
+							<li><a href="{% url 'homepage:login' %}"><span class="glyphicon glyphicon-user"></span> Logout</a></li>
+                    </li>
+
+				</ul>
+
+        	</div>
+		</div>
+	</nav>
+{%endblock %}
+{% block body %}
+{% endblock %}
+<hr class="divider">
+<footer class="footer-distributed">
+
+			<div class="footer-left">
+
+				<h3>Sardar Patel<span> Institute of Technology</span></h3>
+
+				<p class="footer-links">
+					<a href="#">Home</a>
+					·
+					<a href="#">About</a>
+					·
+					<a href="#">Faq</a>
+					·
+					<a href="#">Contact</a>
+				</p>
+
+				<p class="footer-company-name">research funding &copy; 2016</p>
+			</div>
+
+			<div class="footer-center">
+
+				<div>
+					<i class="fa fa-map-marker"></i>
+					<p> Sardar Patel Institute of Technology, Bhavan’s Campus</p>
+					<p><span>Munshi Nagar, Andheri (West), Mumbai 400 058</span></p>
+				</div>
+
+				<div>
+					<i class="fa fa-phone"></i>
+					<p> (91)-(022)-26707440, 26287250 </p>
+				</div>
+
+				<div>
+					<i class="fa fa-envelope"></i>
+					<p><a href="mailto:support@company.com"> researchfunding.spit@gmail.com </a></p>
+				</div>
+
+			</div>
+
+			<div class="footer-right">
+
+				<p class="footer-company-about">
+					<span>About the institute</span>
+					One of the most reputed institutes in Mumbai
+				</p>
+
+
+				</div>
+
+			</div>
+
+		</footer>
+
+</body>
+</html>

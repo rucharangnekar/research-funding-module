@@ -1,0 +1,71 @@
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+			{% extends 'homepage/base.html' %}
+<meta charset="UTF-8">
+	<title>{% block title %}Application form{% endblock %}</title>
+{% block css %}
+	{%load staticfiles%}
+<link rel="stylesheet" type="text/css" href="{% static 'homepage/formcss.css' %}"/>
+
+{% endblock %}
+<head>
+{% block body %}
+<body>
+<div class="content">
+	<h1>Fill the form below:</h1>
+
+	<div class="forming">
+	<form action="{% url 'homepage:student_request' %}" method="post" enctype="multipart/form-data"> {% csrf_token %}
+		<div>
+		<!--Student ID:<br> <input type="text" name="s_id" id="input-id" placeholder="ID" size="50">-->
+		<br><br>
+		Subject of research project:<br><input type="text" name="title" id="input-subject" placeholder="Title" size="50">
+	  </div>
+	  <br><br>
+	  <div>
+		Abstract(max words: 50):
+		<br><textarea name="abstract" type="text" id="input-message" placeholder="Abstract" style="width: 500px; height:300px;"></textarea>
+	  </div>
+		<br><br>	  
+	  <div>
+		Student Name 1(Group Leader):
+		<br><input name="student1" type="text" id="input-message" placeholder="Student name"></input>
+	  </div>
+		<br><br>	  
+	  <div>	
+		Student Name 2:
+		<br><input name="student2" type="text" id="input-message" placeholder="Student name"></input>
+	  </div>
+		<br><br>	  
+	  <div>
+		Student Name 3:
+		<br><input name="student3" type="text" id="input-message" placeholder="Name"></input>
+	  </div>
+		<br><br>	  
+	  <div style="color:black">
+		Mentor name:
+			<br>
+
+			  <h2>Select your mentor</h2><pre><input type="checkbox" name="option" value="1" id="a" > ABC</input>     <input type="checkbox" name="option" value="2" id="b"> BCD</input>    <input type="checkbox" name="option" value="3" id="c"> CDE</input>      <input type="checkbox" name="option" value="4" id="d"> DEF</input>    <input type="checkbox" name="option" value="5" id="e"> EGH</input></pre>
+			 
+		</div>
+	  <br><br>
+
+	 <div>
+		Funding amount requested:
+		<br> <input type="number" name="amt" id="input-amount" placeholder="Amount in rupees" size="50">
+	 </div>
+	 <br><br>
+	 <div>
+		Fundings approved(if any):
+		<br> <input type="" name="fund_approved" id="fund_approved" placeholder="Any Fundings approved earlier" size="50">
+	 </div>
+
+	 <br><br>
+	  <center><input type="Submit" placeholder="SUBMIT"  value="Submit" id="input-submit"/></center>
+	</form>
+</div>
+</div>
+</body>
+{% endblock %}
+</html>

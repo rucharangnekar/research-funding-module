@@ -1,0 +1,32 @@
+.forming{
+    font-size:20px;
+    margin-left:100px;
+    padding-left:100px;
+}
+
+pre{
+		background: inherit;
+		border:none;
+		color:white;
+		font-weight:bold;
+		font-size:20px;
+}
+
+
+input{
+		color:black;
+}
+
+textarea{
+	color:black;
+}
+
+#input-submit{
+	padding:10px;
+	background-color:black;
+	border:none;
+	border-color:black;
+	color:white;
+	font-size:20px;
+	margin-right:100px;
+}

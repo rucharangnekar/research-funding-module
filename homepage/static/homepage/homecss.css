@@ -1,0 +1,211 @@
+.container-fluid {
+	border-style:solid;
+	text-align :left;
+	background-color:white;
+}
+#container1{
+	border-width: 7px;
+}
+
+.button{
+	font-size:25px;
+	padding: 3px 3px 3px 3px;
+	border-color:inherit;
+	border: 1px solid black;
+	opacity:0.5;
+	transition: all .5s;
+    transition-property: all;
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+    transition-delay: 0s;
+}
+.button div{
+	opacity:1.0;
+	color:blue;
+	font-weight:bold;
+}
+
+.button:hover, .button:active{
+    box-shadow: 10px 10px 5px grey;
+	opacity:1.0;
+}
+
+#button1{
+	font: bold Arial;
+	background-color: #000000;
+	color: #333333;
+}
+
+#button2{
+	font: bold Arial;
+	background-color: #ff0000;
+	color: #333333;
+}
+
+#button3{
+	font: bold Arial;
+	background-color: #ff0000;
+	color: #333333;
+}
+
+#button4{
+	font: bold Arial;
+	background-color: #ff0000;
+	color: #333333;
+}
+
+#button5{
+	font: bold Arial;
+	background-color: #ff0000;
+	color: #333333;
+}
+
+#myCarousel .item{height:300px;}
+
+#myCarousel .h11{
+	font-size:30px;
+	font-family:'Pacifico',cursive; 
+	color: white;
+    text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+}
+
+p{text-shadow: 2px 2px 5px red;
+
+	font-style: "Arial"; }
+
+#hp1 {
+	background: url("hp2.jpg") top center no-repeat;
+}
+#hp2 {
+	background: url("hp2.jpg") top center no-repeat;
+}
+#hp3 {
+	background: url("hp2.jpg") top center no-repeat;
+}
+#hp4 {
+	background: url("hp2.jpg") top center no-repeat;
+}
+#hp5 {
+	background: url("hp2.jpg") top center no-repeat;
+}
+
+.window1{
+	display:none;
+}
+
+#controll:hover+ .window1 {
+	display: block;
+}
+
+@media(max-width: 480px){
+	#container1{border-width: 4px;}
+	
+	#myCarousel .item{height:100px;}
+
+	#myCarousel .h11{font-size:10px;}
+	
+	.button{
+	font-size:10px;
+	padding: 1px 1px 1px 1px;
+	}
+	
+	.button:hover, .button:active{
+	font-size:150%;
+	font-family: monospace;
+	}
+
+	#hp1 {
+		background: url("hp2.jpg") top center no-repeat;
+	}
+	#hp2 {
+		background: url("hp2.jpg") top center no-repeat;
+	}
+	#hp3 {
+		background: url("hp2.jpg") top center no-repeat;
+	}
+	#hp4 {
+		background: url("hp2.jpg") top center no-repeat;
+	}
+	#hp5 {
+		background: url("hp2.jpg") top center no-repeat;
+	}
+
+}
+
+
+@media(max-width: 760px){
+	#container1{border-width: 5px;}
+	
+	#myCarousel .item{height:200px;}
+
+	#myCarousel .h11{font-size:15px;}
+	
+	.button{
+	font-size:20px;
+	padding: 2px 2px 2px 2px;
+	}		
+
+	.button:hover, .button:active{
+	font-size:150%;
+	font-family: monospace;
+	}
+
+	#hp1 {
+		background: url("hp2.jpg") top center no-repeat;
+	}
+	#hp2 {
+		background: url("hp2.jpg") top center no-repeat;
+	}
+	#hp3 {
+		background: url("hp2.jpg") top center no-repeat;
+	}
+	#hp4 {
+		background: url("hp2.jpg") top center no-repeat;
+	}
+	#hp5 {
+		background: url("hp2.jpg") top center no-repeat;
+	}
+
+}
+
+@media(min-width: 1200px){
+	#container1{border-width: 10px;}
+	
+	#myCarousel .item{height:400px;}
+	
+	#myCarousel .h11{font-size:30px;}
+
+	#mycontainer.h11{text-shadow: 2px 2px 5px red;}
+
+	.button{
+	font-size:30px;
+	padding: 3px 3px 3px 3px;
+	}
+	
+	
+	#hp1 {
+		background: url("hp2.jpg") top center no-repeat;
+	}
+	#hp2 {
+		background: url("hp2.jpg") top center no-repeat;
+	}
+	#hp3 {
+		background: url("hp2.jpg") top center no-repeat;
+	}
+	#hp4 {
+		background: url("hp2.jpg") top center no-repeat;
+	}
+	#hp5 {
+		background: url("hp2.jpg") top center no-repeat;
+	}
+
+}
+
+
+
+
+
+
+
+
+
